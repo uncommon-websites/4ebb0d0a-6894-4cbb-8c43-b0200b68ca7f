@@ -6,16 +6,23 @@
 	import CallToAction from "$lib/components/layout/CallToAction.svelte";
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
-	import Hero from "$lib/components/layout/hero-sections/Hero.svelte";
+	import CenteredTextOnlyHero from "$lib/components/layout/hero-sections/CenteredTextOnlyHero.svelte";
 </script>
 
-<Hero
-	title="Elevate your business with thoughtful design"
-	subtitle="Solutions that enhance user experience, and improve visual communication."
-	imageSrc="https://www.unc.mn/image-placeholder.svg"
-	generating
+<CenteredTextOnlyHero
+	title="Accurate probabilities for high-leverage events"
+	subtitle="Institutional-grade prediction markets delivering liquid event futures. Trade election outcomes, sports, and market events with tight spreads and deep liquidity."
+	imageSrc="/generated/image-a-modern-interior-space-with-a-group-of-.webp"
 />
-<LogoScroller label="" generating />
+<LogoScroller
+	label="Trusted by traders worldwide"
+	logoUrls={[
+		'https://cdn.brandfetch.io/coinbase.com/w/400/h/400/logo',
+		'https://cdn.brandfetch.io/binance.com/w/400/h/400/logo',
+		'https://cdn.brandfetch.io/draftkings.com/w/400/h/400/logo',
+		'https://cdn.brandfetch.io/interactivebrokers.com/w/400/h/400/logo'
+	]}
+/>
 
 <Summary
 	generating
