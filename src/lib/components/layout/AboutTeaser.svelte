@@ -21,9 +21,9 @@ A minimalist teaser for the about page.
 
 	// Data
 	const teamMember: TeamMember = {
-		name: "Alex Morgan",
-		role: "Founder & CEO",
-		image: "https://www.unc.mn/image-placeholder.svg"
+		name: "Kratik",
+		role: "CEO & Co-founder",
+		image: "/generated/image-a-professional-portrait-of-a-confident-f.webp"
 	};
 </script>
 
@@ -32,7 +32,7 @@ A minimalist teaser for the about page.
 		<div class="relative mx-auto grid max-w-2xl place-items-center gap-16">
 			<ScrollText
 				class="text-title1 text-center"
-				text={`"We're building the future of digital experiences, crafting innovative solutions that transform how people interact with technology in their everyday lives"`}
+				text={`"I watched traders burn millions on wide spreads and shallow liquidity in event markets. The infrastructure to treat prediction markets with institutional rigor simply didn't exist. We're building that foundation—not just for crypto natives, but for every trader who demands precision when their capital is on the line."`}
 			/>
 
 			<!-- Team Member & CTA Section -->

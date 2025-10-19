@@ -1,7 +1,7 @@
 export const CONFIG = {
-	companyName: "Company",
-	description: "Description",
+	companyName: "Totem Markets",
+	description: "Accurate probabilities for high-leverage events through institutional-grade prediction markets",
 	image: "/og.png",
-	url: "https://example.com",
+	url: "https://totemmarkets.com",
 	fontFamily: "Inter Variable"
 };

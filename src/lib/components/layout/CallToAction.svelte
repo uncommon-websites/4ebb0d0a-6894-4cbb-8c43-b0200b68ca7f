@@ -69,31 +69,41 @@
 <div class="" {...rest}>
 	<section class="section-px section-py container mx-auto">
 		<div
-			class="bg-card border-border grid content-start items-center justify-between gap-(--gap) rounded-(--radius) border p-(--gap) text-balance [--gap:--spacing(8)] [--inner-radius:calc(var(--radius)-var(--gap))] [--radius:var(--radius-xl)] lg:grid-cols-[2fr_1fr]"
+			class="relative grid content-start items-center justify-between gap-(--gap) overflow-hidden rounded-(--radius) p-(--gap) text-balance [--gap:--spacing(8)] [--inner-radius:calc(var(--radius)-var(--gap))] [--radius:var(--radius-xl)] lg:grid-cols-[2fr_1fr]"
+			style="background: linear-gradient(135deg, #9B51E0 0%, #FF8A00 50%, #2F80ED 100%);"
 		>
-			<div class="items-between grid h-full content-between gap-16">
-				<h2 class="text-title1 mb-3 flex flex-col">
+			<div class="relative z-10 items-between grid h-full content-between gap-16">
+				<h2 class="text-title1 mb-3 flex flex-col text-white">
 					<span><AnimateText text={title} /></span>
-					<span class="text-emphasis-low"><AnimateText text={subtitle} /></span>
+					<span class="opacity-90"><AnimateText text={subtitle} /></span>
 				</h2>
 				<div class="flex flex-col items-start justify-start gap-7">
-					<p class="text-headline text-emphasis-low">
+					<p class="text-headline text-white opacity-90">
 						{description}
 					</p>
 					<div class="flex w-full flex-col gap-2 md:flex-row md:flex-wrap">
 						{#each callsToAction as cta}
-							<Button class="w-full md:w-auto" href={cta.href} variant={cta.variant || "primary"}
-								>{cta.label}</Button
+							<Button 
+								class={[
+									"w-full md:w-auto font-bold transition-all duration-200",
+									cta.variant === "primary" ? "bg-[#00F56E] text-gray-950 hover:bg-[#00DD5F]" : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
+								]}
+								href={cta.href}
+								variant={cta.variant || "primary"}
 							>
+								{cta.label}
+							</Button>
 						{/each}
 					</div>
 				</div>
 			</div>
-			<img
-				src={imageSrc}
-				alt="Visual comparison showing product benefits"
-				class="hidden aspect-[4/5] size-full max-h-full w-full rounded-[calc(max(var(--inner-radius),.25rem))] object-cover lg:block"
-			/>
+			<div class="relative z-10 hidden lg:block">
+				<img
+					src={imageSrc}
+					alt="Successful trader celebrating achievement"
+					class="aspect-[4/5] size-full max-h-full w-full rounded-[calc(max(var(--inner-radius),.25rem))] object-cover"
+				/>
+			</div>
 		</div>
 	</section>
 </div>
